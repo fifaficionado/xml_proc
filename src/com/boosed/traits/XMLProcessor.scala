@@ -66,7 +66,7 @@ trait XMLProcessor {
     // returns an empty string
     //def \(id: String) = md.get(id).toRight("").fold(identity, _.text.trim)
     //def \(id: String) = md(id).text.trim
-	def \(id: String) = md.get(id)
+    def \(id: String) = md.get(id)
   }
 
   // refinement class to pull attributes & inner text from XML events

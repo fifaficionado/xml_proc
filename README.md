@@ -20,7 +20,7 @@ example usage:
     case (end @ "body") => until(end) {
       case (end @ "table", _, attrs) =>
         // grab attribute data from table before proceeding
-        println(s"""table height is ${attrs \ "height"}""")
+        println(s"""table height is ${(attrs \ "height").getOrElse("no height")}"""
         
         // finish parsing through nested table elements
         until(end) {

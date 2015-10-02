@@ -65,7 +65,8 @@ trait XMLProcessor {
     // retrieve an attribute for this tag (e.g., attrs \ "id"); if not present,
     // returns an empty string
     //def \(id: String) = md.get(id).toRight("").fold(identity, _.text.trim)
-    def \(id: String) = md(id).text.trim
+    //def \(id: String) = md(id).text.trim
+	def \(id: String) = md.get(id)
   }
 
   // refinement class to pull attributes & inner text from XML events
